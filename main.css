@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ header{
     letter-spacing: 16px;
 }
 
-#poseContainer{
+#poseContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ header{
     background-color: black;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
