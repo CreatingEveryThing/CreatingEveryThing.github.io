@@ -1,3 +1,41 @@
-h1{
-    color: blue;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: darkgrey;
+    background-image: url(/image/header-banner.jpg);
+    color: white;
+    text-shadow: 4px 4px 8px red;
+    font-size: 48px;
+    letter-spacing: 16px;
+}
+
+#poseContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 24px 0;
+    background-color: black;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    color: white;
+    text-shadow: 4px 4px 8px blue;
+    font-size: 24px;
+    background-image: url(/image/header-banner.jpg);
 }
