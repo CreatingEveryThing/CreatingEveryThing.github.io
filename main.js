@@ -15,7 +15,7 @@ function preload() {
   playerImageUp = loadImage('playerImageUp.png');
   playerImageDown = loadImage('playerImageDown.png');
   enemyImage = loadImage('enemyImage.png');
-  
+
   jumpSound = loadSound('jump.mp3');
   // moveSound = loadSound('move.mp3');
 }
@@ -43,8 +43,8 @@ function draw() {
       player.moveDown();
     }
 
-    player.update();　
-    
+    player.update();
+
     fill(0);
     textSize(24);
     text(`Lives: ${player.lives}`, 10, 30);
@@ -109,7 +109,7 @@ function keyPressed() {
       gameState = 'playing';
     }
   }
-  if (key === 'm'){
+  if (key === 'm') {
     player.loseLife();
   }
 }
