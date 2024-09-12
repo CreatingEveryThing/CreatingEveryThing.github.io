@@ -95,4 +95,33 @@ class Player {
     this.isHit = false;
     this.hitTimer = 0;
   }
+  
+  keyPressed() {
+    if (key === ' ') {
+      this.jump();
+    }
+    if (key === 'd' || keyCode === RIGHT_ARROW) {
+      right = true;
+      left = false;
+    }
+    if (key === 'a' || keyCode === LEFT_ARROW) {
+      left = true;
+      right = false;
+    }
+    if (key === 's' || keyCode === DOWN_ARROW) {
+      down = true;
+    }
+  }
+
+  keyReleased() {
+    if (key === 'd' || keyCode === RIGHT_ARROW) {
+      right = false;
+    }
+    if (key === 'a' || keyCode === LEFT_ARROW) {
+      left = false;
+    }
+    if (key === 's' || keyCode === DOWN_ARROW) {
+      down = false;
+    }
+  }
 }
