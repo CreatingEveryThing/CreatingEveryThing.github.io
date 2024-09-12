@@ -15,7 +15,7 @@ function preload() {
   playerImageUp = loadImage('playerImageUp.png');
   playerImageDown = loadImage('playerImageDown.png');
   enemyImage = loadImage('enemyImage.png');
-
+  
   jumpSound = loadSound('jump.mp3');
   // moveSound = loadSound('move.mp3');
 }
@@ -43,8 +43,8 @@ function draw() {
       player.moveDown();
     }
 
-    player.update();
-
+    player.update();　
+    
     fill(0);
     textSize(24);
     text(`Lives: ${player.lives}`, 10, 30);
@@ -82,46 +82,9 @@ function drawEndScreen() {
 }
 
 function keyPressed() {
-  if (key === ' ') {
-    player.jump();
-  }
-  if (key === 'd' || keyCode === RIGHT_ARROW) {
-    right = true;
-    left = false;
-  }
-  if (key === 'a' || keyCode === LEFT_ARROW) {
-    left = true;
-    right = false;
-  }
-  if (key === 's' || keyCode === DOWN_ARROW) {
-    down = true;
-  }
-  if (key === 'Enter') {
-    if (gameState === 'start' || gameState === 'end') {
-      gameState = 'playing';
-      player.reset();
-    }
-  }
-  if (key === 'Escape') {
-    if (gameState === 'playing') {
-      gameState = 'paused';
-    } else if (gameState === 'paused') {
-      gameState = 'playing';
-    }
-  }
-  if (key === 'm') {
-    player.loseLife();
-  }
+  player.keyPressed();
 }
 
 function keyReleased() {
-  if (key === 'd' || keyCode === RIGHT_ARROW) {
-    right = false;
-  }
-  if (key === 'a' || keyCode === LEFT_ARROW) {
-    left = false;
-  }
-  if (key === 's' || keyCode === DOWN_ARROW) {
-    down = false;
-  }
+  player.keyReleased();
 }
